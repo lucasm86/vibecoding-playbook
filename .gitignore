@@ -1,0 +1,34 @@
+# ---------------------------------------------------------------------------
+# SOURCE MATERIAL PROTECTION
+# The original books are source material only. They must NEVER enter Git.
+# This repository contains original analysis and derived doctrine only.
+# ---------------------------------------------------------------------------
+*.pdf
+*.epub
+*.mobi
+*.azw
+*.azw3
+*.djvu
+*.m4a
+*.mp4
+
+# Source-book working directories (extracted text, notes)
+books/
+sources/
+source-books/
+extracted/
+_work/
+
+# ---------------------------------------------------------------------------
+# Tooling / OS noise
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+.venv/
+__pycache__/
+node_modules/
+.idea/
+.vscode/

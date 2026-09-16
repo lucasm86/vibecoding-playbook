@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "D4Vinci/Scrapling",
+    "url": "https://github.com/D4Vinci/Scrapling",
+    "categoria": "scraping",
+    "tags": [
+      "scraping",
+      "python",
+      "anti-deteccion",
+      "crawler",
+      "mcp",
+      "playwright"
+    ],
+    "proposito": "Framework de web scraping en Python con fetchers HTTP y de navegador, selectores adaptativos que se auto-reparan cuando cambia el markup del sitio, y un framework de spiders para crawls a mayor escala.",
+    "forma_de_uso": "libreria",
+    "madurez": "estable",
+    "licencia_spdx": "BSD-3-Clause",
+    "apto_producto_propietario": "si",
+    "archivado": false,
+    "probado_por_nosotros": false,
+    "ficha": "catalog/entries/scraping/d4vinci__scrapling.yaml"
+  }
+]

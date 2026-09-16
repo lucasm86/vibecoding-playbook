@@ -107,9 +107,20 @@ vibecoding-playbook/
 │   ├── CODESTYLE.template.md
 │   └── ROADMAP.template.md
 │
-└── agents/                       ← Role definitions, derived from the doctrine
-    ├── ARCHITECT.md
-    └── EXECUTOR.md
+├── agents/                       ← Role definitions, derived from the doctrine
+│   ├── ARCHITECT.md
+│   └── EXECUTOR.md
+│
+├── catalog/                      ← Curated GitHub repos the Architect consults
+│   ├── README.md                    ← what it is, how to use/add entries
+│   ├── SCHEMA.md                    ← field definitions and allowed values
+│   ├── CATEGORIES.md                ← closed list of allowed categories
+│   ├── TEMPLATE.yaml                ← blank fiche to copy
+│   ├── entries/<categoria>/*.yaml   ← one fiche per repository
+│   └── index.json                   ← GENERATED, never edited by hand
+│
+└── scripts/
+    └── build_catalog_index.py    ← validates entries/, regenerates index.json
 ```
 
 ### References vs. Doctrine — the important distinction

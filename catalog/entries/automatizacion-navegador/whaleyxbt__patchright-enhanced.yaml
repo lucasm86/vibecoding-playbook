@@ -1,0 +1,41 @@
+id: "whaleyxbt/patchright-enhanced"
+url: "https://github.com/whaleyxbt/patchright-enhanced"
+nombre: "patchright-enhanced"
+categoria: "automatizacion-navegador"
+tags: ["navegador-headless", "anti-deteccion", "typescript", "patchright", "waf-bypass"]
+
+licencia_spdx: null
+archivado: false
+ultimo_push: "2026-09-16T08:22:37Z"
+estrellas: 28
+lenguaje_principal: "TypeScript"
+verificado_el: "2026-09-16"
+
+proposito: "Wrapper delgado en TypeScript sobre patchright (fork con parches de stealth de Playwright) que abre una sesion de Chrome con las protecciones anti-deteccion ya aplicadas, pensado segun su README para QA, monitoreo, automatizacion interna, pentesting y bypass de WAFs."
+capacidades:
+  - "Abre una sesion de Chrome via patchright con flags anti-automatizacion ajustados (navigator.webdriver en false, sin --enable-automation, parche del leak de Runtime.enable)"
+  - "Soporta proxies leidos desde un archivo de texto (proxies.txt), con formato host:port:usuario:contrasena"
+  - "Configuracion via variables de entorno (.env): ruta del binario de Chrome, timezone del navegador, cantidad de sesiones paralelas, URL inicial"
+  - "La sesion queda abierta hasta que el usuario cierra la ventana manualmente (uso interactivo, no un servicio headless por defecto)"
+stack_y_dependencias: "Node.js + TypeScript; dependencia relevante unica declarada en package.json: patchright (^1.57.0). Se instala con npm install + npx patchright install chrome."
+forma_de_uso: "cli"
+madurez: "experimental"
+
+por_que_nos_sirve: "Sirve para sacar informacion de sitios que bloquean navegadores automatizados: da una sesion de Chrome con stealth ya configurado como base para scraping o pruebas propias, sin tener que integrar patchright a mano."
+usar_cuando:
+  - "Hace falta una sesion de Chrome con los parches de stealth de patchright ya integrados, sin configurar patchright desde cero"
+  - "El caso de uso es automatizacion interna o QA propia, con autorizacion clara sobre los sitios objetivo"
+no_usar_cuando:
+  - "Se necesita una libreria con historial de mantenimiento verificable: no tiene tags ni releases, tiene un unico mantenedor y muy poca antiguedad (creado 2026-03-25)"
+  - "El proyecto no tiene licencia declarada, por lo que no hay permiso explicito de uso o redistribucion mas alla de verlo publicamente en GitHub"
+  - "El objetivo es evadir protecciones (Cloudflare, Kasada, DataDome) de un sitio de terceros sin autorizacion; el propio README lo enmarca tambien como herramienta de pentesting, uso que requiere alcance autorizado"
+alternativas:
+  - "D4Vinci/Scrapling"
+  - "https://github.com/Kaliiiiiiiiii-Vinyzu/patchright-nodejs"
+probado_por_nosotros: false
+proyectos_donde_se_uso: []
+
+compatibilidad_licencia: "sin-licencia"
+apto_producto_propietario: "no"
+riesgo_legal: "Esta explicitamente disenado para evadir sistemas anti-bot de terceros (Cloudflare, Kasada, DataDome); usarlo contra un sitio sin autorizacion puede violar sus Terminos de Servicio. El propio README lo describe tambien para 'penetration testing', lo que exige autorizacion explicita del objetivo antes de usarlo."
+notas: "Sin releases ni tags (0 y 0). El nombre interno en package.json es 'ghostprobe', distinto del nombre del repositorio. La descripcion de GitHub ('Browser automation toolkit for QA, monitoring and internal workflows') es mas acotada que la del README ('penetration testing, scraping, and WAF bypass'); se documentan ambas por separado en este registro."

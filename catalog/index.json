@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "whaleyxbt/patchright-enhanced",
+    "url": "https://github.com/whaleyxbt/patchright-enhanced",
+    "categoria": "automatizacion-navegador",
+    "tags": [
+      "navegador-headless",
+      "anti-deteccion",
+      "typescript",
+      "patchright",
+      "waf-bypass"
+    ],
+    "proposito": "Wrapper delgado en TypeScript sobre patchright (fork con parches de stealth de Playwright) que abre una sesion de Chrome con las protecciones anti-deteccion ya aplicadas, pensado segun su README para QA, monitoreo, automatizacion interna, pentesting y bypass de WAFs.",
+    "forma_de_uso": "cli",
+    "madurez": "experimental",
+    "licencia_spdx": null,
+    "apto_producto_propietario": "no",
+    "archivado": false,
+    "probado_por_nosotros": false,
+    "ficha": "catalog/entries/automatizacion-navegador/whaleyxbt__patchright-enhanced.yaml"
+  }
+]

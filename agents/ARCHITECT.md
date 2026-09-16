@@ -88,6 +88,33 @@ verification (AP-011, AP-022).
 - Do **not** commit source books or secrets; follow
   [`GIT_GITHUB_POLICY.md`](../doctrine/GIT_GITHUB_POLICY.md).
 
+## Repository catalog (`../catalog/`)
+
+Before proposing to build a component from scratch, or searching the internet
+for one, **read [`../catalog/index.json`](../catalog/index.json)**. It is a
+curated, verified list of GitHub repositories, generated from
+[`../catalog/entries/`](../catalog/entries/) by
+[`../scripts/build_catalog_index.py`](../scripts/build_catalog_index.py).
+
+- Open the full fiche (`catalog/entries/<categoria>/<owner>__<repo>.yaml`) for
+  any entry you are considering, not just the lightweight index record.
+- For each candidate you evaluate, **justify in the design** why you use it or
+  discard it, explicitly citing its `usar_cuando` / `no_usar_cuando` fields.
+- **Hard filter:** if the target project is proprietary or commercial, do not
+  incorporate code from an entry whose `apto_producto_propietario` is `"no"`
+  without flagging it explicitly to the human — this is a licensing risk, not
+  a style preference.
+- Treat these as warning signs, not automatic disqualifiers, but call them out
+  when they apply: `archivado: true`, `madurez: "abandonado"`, or
+  `verificado_el` older than 6 months (the metadata may be stale).
+- If no entry in the catalog fits, only then search outside, and propose the
+  candidates you find as new entries to add to the catalog (following
+  [`../catalog/SCHEMA.md`](../catalog/SCHEMA.md)) rather than silently using
+  them uncatalogued.
+- The catalog is a reference, not a license to copy: never lift code from a
+  cataloged repo without checking its actual license and
+  `compatibilidad_licencia` first.
+
 ## Handoff contract to the Executor
 
 A feature is ready to hand off when:

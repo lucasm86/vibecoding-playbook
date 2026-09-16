@@ -1,0 +1,40 @@
+# Ficha vacía de catálogo. Copiá este archivo a
+# entries/<categoria>/<owner>__<repo>.yaml y completá todos los campos.
+# Ver catalog/SCHEMA.md para la definición completa de cada campo y los
+# valores permitidos en los enums.
+
+# --- Identificación ---
+id: "owner/repo"                # exacto, como en la URL de GitHub
+url: "https://github.com/owner/repo"
+nombre: "Nombre legible del proyecto"
+categoria: "utilidades"         # una de catalog/CATEGORIES.md
+tags: []                        # 3-6 términos cortos en minúsculas
+
+# --- Metadatos verificables (API de GitHub, nunca a ojo) ---
+licencia_spdx: null             # ej. "MIT", "Apache-2.0", o null si no declara
+archivado: false
+ultimo_push: "1970-01-01T00:00:00Z"
+estrellas: 0
+lenguaje_principal: null
+verificado_el: "1970-01-01"     # fecha en que se consultó la API
+
+# --- Contenido técnico ---
+proposito: ""                   # una o dos oraciones
+capacidades: []                 # funciones concretas, no marketing
+stack_y_dependencias: ""        # lo relevante para integrarlo
+forma_de_uso: "libreria"        # libreria | cli | servicio | api | referencia-de-codigo
+madurez: "experimental"         # experimental | estable | abandonado (ver SCHEMA.md)
+
+# --- Criterio (lo más importante) ---
+por_que_nos_sirve: ""           # obligatorio: qué aportamos al cargarlo, no qué hace el repo
+usar_cuando: []
+no_usar_cuando: []
+alternativas: []                # ids "owner/repo" de otras fichas, o URLs externas
+probado_por_nosotros: false
+proyectos_donde_se_uso: []
+
+# --- Riesgos ---
+compatibilidad_licencia: "desconocida"   # permisiva | copyleft-debil | copyleft-fuerte | sin-licencia | desconocida
+apto_producto_propietario: "a-revisar"   # si | con-condiciones | no | a-revisar
+riesgo_legal: null              # nota breve o null
+notas: ""

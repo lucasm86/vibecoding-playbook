@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "Panniantong/Agent-Reach",
+    "url": "https://github.com/Panniantong/Agent-Reach",
+    "categoria": "scraping",
+    "tags": [
+      "scraping-multiplataforma",
+      "cli",
+      "agentes-ia",
+      "python",
+      "redes-sociales",
+      "mcp"
+    ],
+    "proposito": "CLI/skill que le da a un agente de IA (Claude Code, OpenClaw, Cursor, etc.) capacidad de leer y buscar contenido en paginas web, YouTube, RSS y GitHub sin configuracion, y en Twitter/X, Reddit, Bilibili, Xiaohongshu, Facebook, Instagram y LinkedIn con configuracion adicional (casi siempre via cookies o login manual).",
+    "forma_de_uso": "cli",
+    "madurez": "experimental",
+    "licencia_spdx": "MIT",
+    "apto_producto_propietario": "a-revisar",
+    "archivado": false,
+    "probado_por_nosotros": false,
+    "ficha": "catalog/entries/scraping/panniantong__agent-reach.yaml"
+  }
+]

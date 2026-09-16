@@ -1,0 +1,43 @@
+id: "D4Vinci/Scrapling"
+url: "https://github.com/D4Vinci/Scrapling"
+nombre: "Scrapling"
+categoria: "scraping"
+tags: ["scraping", "python", "anti-deteccion", "crawler", "mcp", "playwright"]
+
+licencia_spdx: "BSD-3-Clause"
+archivado: false
+ultimo_push: "2026-09-14T19:47:52Z"
+estrellas: 81294
+lenguaje_principal: "Python"
+verificado_el: "2026-09-16"
+
+proposito: "Framework de web scraping en Python con fetchers HTTP y de navegador, selectores adaptativos que se auto-reparan cuando cambia el markup del sitio, y un framework de spiders para crawls a mayor escala."
+capacidades:
+  - "Fetchers HTTP y basados en navegador (Fetcher, AsyncFetcher, StealthyFetcher, DynamicFetcher) para paginas estaticas y renderizadas con JS"
+  - "Selectores CSS/XPath 'adaptativos' que reubican elementos automaticamente cuando cambia el HTML del sitio (auto_save / adaptive)"
+  - "StealthyFetcher bypassea Cloudflare Turnstile y otras protecciones anti-bot comunes"
+  - "Framework de Spiders para crawls concurrentes multi-sesion con pausa/resumen y rotacion automatica de proxies"
+  - "CLI propia y servidor MCP para exponerse como herramienta de un agente de IA"
+stack_y_dependencias: "Python >=3.10; se instala con 'pip install scrapling'. Los fetchers dinamicos (StealthyFetcher/DynamicFetcher) dependen de un motor de navegador (Playwright/Camoufox) que se descarga aparte."
+forma_de_uso: "libreria"
+madurez: "estable"
+
+por_que_nos_sirve: "Sirve para sacar informacion de cualquier sitio web sin tener que armar a mano el bypass de proteccion anti-bot ni el manejo de selectores fragiles: cubre desde un fetch simple hasta un crawl completo con proxies."
+usar_cuando:
+  - "Hay que extraer datos de sitios con proteccion anti-bot (Cloudflare, etc.) y no conviene armar el bypass a mano"
+  - "El sitio objetivo cambia de estructura HTML seguido y el scraper no deberia romperse cada vez (selectores adaptativos)"
+  - "Hace falta escalar a un crawl multi-pagina con control de concurrencia y rotacion de proxies"
+no_usar_cuando:
+  - "El proyecto exige una API 100% congelada y estable: sigue en pre-1.0 segun su propio metadata de PyPI (ver notas)"
+  - "El sitio objetivo prohibe expresamente el scraping en sus Terminos de Servicio y no hay autorizacion para hacerlo igual"
+  - "Alcanza con un cliente HTTP simple (requests/httpx) porque el sitio no tiene proteccion anti-bot ni contenido dependiente de JS"
+alternativas:
+  - "whaleyxbt/patchright-enhanced"
+  - "https://github.com/scrapy/scrapy"
+probado_por_nosotros: false
+proyectos_donde_se_uso: []
+
+compatibilidad_licencia: "permisiva"
+apto_producto_propietario: "si"
+riesgo_legal: "Bypassea protecciones anti-bot de sitios de terceros (Cloudflare Turnstile, etc.); usarlo contra un sitio puede violar sus Terminos de Servicio aunque la libreria en si sea legal. Si se extraen datos personales, aplica la Ley 25.326 (Argentina) u otra normativa de proteccion de datos segun la jurisdiccion del sitio objetivo."
+notas: "El propio pyproject.toml clasifica el proyecto como 'Development Status :: 4 - Beta' y la version es pre-1.0 (0.4.15) pese a tener 30 releases, ~81k estrellas y ~8.2k forks: adopcion real amplia, pero sin garantia de API estable todavia."

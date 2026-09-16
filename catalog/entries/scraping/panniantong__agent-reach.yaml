@@ -1,0 +1,42 @@
+id: "Panniantong/Agent-Reach"
+url: "https://github.com/Panniantong/Agent-Reach"
+nombre: "Agent Reach"
+categoria: "scraping"
+tags: ["scraping-multiplataforma", "cli", "agentes-ia", "python", "redes-sociales", "mcp"]
+
+licencia_spdx: "MIT"
+archivado: false
+ultimo_push: "2026-09-15T16:16:24Z"
+estrellas: 82278
+lenguaje_principal: "Python"
+verificado_el: "2026-09-16"
+
+proposito: "CLI/skill que le da a un agente de IA (Claude Code, OpenClaw, Cursor, etc.) capacidad de leer y buscar contenido en paginas web, YouTube, RSS y GitHub sin configuracion, y en Twitter/X, Reddit, Bilibili, Xiaohongshu, Facebook, Instagram y LinkedIn con configuracion adicional (casi siempre via cookies o login manual)."
+capacidades:
+  - "Lectura de paginas web genericas y feeds RSS/Atom sin configuracion"
+  - "Extraccion de subtitulos y busqueda de videos de YouTube (via yt-dlp embebido)"
+  - "Lectura y busqueda de repositorios publicos de GitHub, con soporte opcional autenticado para repos privados e issues/PRs"
+  - "Integraciones adicionales para Twitter/X, Reddit, Bilibili, Xiaohongshu, Facebook, Instagram y LinkedIn, la mayoria requiriendo cookies de sesion o login manual del usuario"
+  - "Comando de diagnostico ('agent-reach doctor') que reporta que integraciones estan configuradas y funcionando"
+  - "Ruteo primario+respaldo por plataforma: si un metodo de acceso se rompe por bloqueo del sitio, el proyecto dice cambiar a otro backend en una actualizacion"
+stack_y_dependencias: "Python 3.10+. La instalacion documentada consiste en pegarle al agente de IA una URL (docs/install.md) para que el propio agente la ejecute via shell (pip install, y opcionalmente node/gh CLI/mcporter para integraciones extra)."
+forma_de_uso: "cli"
+madurez: "experimental"
+
+por_que_nos_sirve: "Sirve para sacar informacion de cualquier sitio web: cubre en un solo paquete varias plataformas (web, YouTube, RSS, GitHub, redes sociales) que de otro modo requeririan integraciones separadas."
+usar_cuando:
+  - "Un agente de IA necesita leer contenido publico de la web, YouTube o RSS sin escribir un scraper especifico para cada uno"
+  - "Ya se acepta que el agente use cookies o sesiones personales del usuario para acceder a las plataformas que las requieren"
+no_usar_cuando:
+  - "El proyecto es propietario/comercial y no se puede auditar ni congelar el script de instalacion remoto antes de correrlo (el flujo documentado le pide al agente ejecutar comandos de shell a partir de una URL)"
+  - "Se necesita scrapear Twitter/X, Reddit, Instagram, Facebook o Xiaohongshu de forma sostenida: son plataformas que prohiben el scraping en sus Terminos de Servicio, y la propia documentacion admite que la via anonima de Reddit 'esta bloqueada'"
+  - "Se van a procesar datos personales de terceros de forma sistematica sin revisar la base legal aplicable (Ley 25.326 u otra segun jurisdiccion)"
+alternativas:
+  - "https://github.com/jina-ai/reader"
+probado_por_nosotros: false
+proyectos_donde_se_uso: []
+
+compatibilidad_licencia: "permisiva"
+apto_producto_propietario: "a-revisar"
+riesgo_legal: "Varias integraciones (Twitter/X, Reddit, Instagram, Facebook, LinkedIn, Xiaohongshu) dependen de sesiones/cookies de cuentas personales o de sortear bloqueos anti-scraping explicitos; scrapear esas plataformas normalmente viola sus Terminos de Servicio y puede exponer datos personales de terceros (Ley 25.326 u otra normativa aplicable). El instalador ademas le pide al agente ejecutar comandos de shell arbitrarios y habilitar permisos de 'exec' a partir de una URL remota; no auditamos ni ejecutamos ese script como parte de esta evaluacion."
+notas: "README y documentacion principal en chino, no se tradujeron integramente para esta ficha. Crecimiento muy acelerado (repo creado 2026-02-24, marcado por el propio README como 'Trendshift #1 del dia') en pocos meses; no se pudo verificar de forma independiente que tan sostenido es ese crecimiento. licencia MIT segun GitHub, pero eso solo cubre el codigo del CLI, no las condiciones de uso de las plataformas que scrapea."
